@@ -1,79 +1,253 @@
-header {
-display: flex;
-    align-items: center;
-    padding-top: 10px;
-}
-.menu {
-    display: flex;
-    height: 38px;
-    width: 1370px;
-    justify: space-between;
-    padding: 10px;
-    align-items: center;
-    background-color: #ffdbde;
-    border-radius: 20px;
-}
-
 body {
-    padding: 0;
+    width: 100%;
     margin: 0;
+    background-color: rgba(247, 144, 228, 1);
+    font-family: Arial, sans-serif;
 }
 
-.container {
-    margin: auto;
+header {
+    background-color: rgba(255, 255, 255, 1);
+    height: 68px;
+    max-width: 1370px;                           /* по БЭМ блоку не следует задавать внешнюю геометрию, потом переделать */
+    border-radius: 20px;
+    display: flex;
     align-items: center;
-    width: 41px;
-    height: 742px;
+    padding: 10px;
+    margin: 35px auto;
+    box-sizing: border-box;
+    justify-content: space-between;
+    cursor: default;
+
 }
 
 .logo {
-font-size: 24px;
+    flex: 1;
+    text-align: left;
+    padding: 18px 0 12px 10px;
+    line-height: 19px;  /*фигня из воздуха взяла цифры потом переделать*/
+    font-family: "Rubik Mono One", monospace;
+}
+
+.logo-line {
     color: rgba(247, 144, 228, 1);
     font-weight: bold;
     text-decoration: none;
+    font-size: 24px;
 }
 
-.navbar {
-
+nav {
+    flex: 2;
+    text-align: center;
 }
 
-.menu-items {
-display: flex;
-    gap: 150px;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-.menu-item {
-list-style-type: none;
+nav li {
+    margin: 0 10px;
 }
 
-.menu-item a {
-    font-size: 14px;
-    font-weight: bold;
+nav a {
+    padding: 14px;
+    text-decoration: none;
     color: rgba(37, 37, 37, 1);
-    text-decoration: none;
-    transition: all 0.5s;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 1);
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
 
-}
-.menu-item a:hover {
+ nav a:hover{
+    background-color: rgba(255, 236, 252, 1);
     color: rgba(247, 144, 228, 1);
-    border-bottom: 20px solid rgba(255, 236, 252, 1);
-    border-radius: 50%;
+    border: 1px solid rgba(255, 236, 252, 1);
+    border-radius: 20px;
 }
+
+
+
+
 
 footer {
     width: 100%;
     height: 490px;
     position: relative;
     background-color: rgba(18, 18, 18, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    box-sizing: border-box;
+    margin-top: auto;
+    cursor: default;
 
 }
 
-.main {
-
+footer .logo {
+    flex: 1;
+    margin-left: 60px;
+    margin-bottom: 40px;
+    font-family: "Rubik Mono One", monospace;
 }
+
+footer .logo-line {
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer-content-block {
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+    font-weight: bold;
+}
+
+.pages {
+    list-style: none;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.pages li {
+    margin-right: 50px;
+}
+
+
+footer a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+
+.wish {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    margin-right: 45px;
+}
+
+
+
+
+
+
+
+.title {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 160px;
+    box-sizing: border-box;
+    cursor: default;
+    font-family: "Rubik Mono One", monospace;
+}
+
+.caption {
+    width: 1313px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-stretch: 50%;
+}
+
+.caption-text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 290px;
+    padding: 40px;
+    transform: scaleX(1.5);
+}
+
+.caption-top {
+    font-size: 548px;
+    color: rgba(255, 243, 189, 1);
+    font-weight: bold;
+}
+
+.caption-bottom {
+    font-size: 220px;
+    color: rgba(255, 243, 189, 1);
+    font-weight: bold;
+    letter-spacing: normal;
+}
+
+.image-container {
+    max-width: 444px;
+    max-height: 710px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
 
 .hobbies {
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    margin-top: 20px;
+    border-radius: 80px;
+    padding: 200px 70px;
+}
 
+
+.hobbies-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: -40px;
+}
+
+.box1 {
+    grid-column-start: 3;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    display: inline-block;
+}
+
+.hobbies-card-title {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 60px;
+    color: rgba(37, 37, 37, 1);
+    margin-top: 80px;
+    line-height: 1px;
+    margin-left: 250px;
+    transform: scaleX(1.5);
+
+}
+
+.hobbies-card {
+    padding: 80px 20px;
+    background-color: rgba(244, 244, 244, 1);
+    border-radius: 40px;
+    font-weight: bold;
+    position: relative;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: #bdbdbd;
+
+}
+
+.hobbies-words {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    margin: 0;
 }
 
 .routine {
@@ -81,5 +255,4 @@ footer {
 }
 
 .story {
-
 }
