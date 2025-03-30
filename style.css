@@ -3,6 +3,7 @@ body {
     margin: 0;
     background-color: rgba(247, 144, 228, 1);
     font-family: Arial, sans-serif;
+
 }
 
 header {
@@ -83,9 +84,10 @@ footer {
     justify-content: space-between;
     align-items: flex-end;
     box-sizing: border-box;
-    margin-top: auto;
+    margin-top: 99%;
     cursor: default;
-
+    overflow: hidden;
+    z-index: 1;
 }
 
 footer .logo {
@@ -148,7 +150,7 @@ footer a {
     font-family: "Rubik Mono One", monospace;
 }
 
-.caption {
+.title-caption {
     width: 1313px;
     height: 50%;
     display: flex;
@@ -200,6 +202,7 @@ footer a {
     margin-top: 20px;
     border-radius: 80px;
     padding: 200px 70px;
+    overflow: hidden;
 }
 
 
@@ -250,9 +253,156 @@ footer a {
     margin: 0;
 }
 
+
+
+
+
+
 .routine {
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    margin-top: -200px;
+    padding: 180px 70px;
+    overflow: hidden;
+}
+.caption {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 80px;
+    line-height: 10px;
+    display: inline-block;
+    transform: scaleX(1.6);
+    padding-left: 25%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.routine-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2
+}
+
+.routine-card {
+    width: 426px;
+    height: 450px;
+    background-color: rgba(37, 37, 37, 0.08);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* выравниваю контент по низу */
+    box-sizing: border-box;
+}
+
+.special-card {
+   margin-top: 80px;
+}
+
+.routine-foto {
+    max-width: 100%; /* чтобы картинка не выходила за границы карточки */
+    height: auto;
+    border-radius: 20px;
+    display: block;
+}
+
+.special-card .routine-foto {
+    width: 80%;
+    height: auto;
+    padding-left: 20%;
 
 }
 
+.routine-text {
+ font-weight: bold;
+ padding-left: 50px;
+}
+
+
+
+
+
+
+
 .story {
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    margin-top: -200px;
+    overflow: hidden;
+    padding-top: 200px;
+    border-radius: 80px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    padding-bottom: 40px;
+}
+
+.story-cover {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-cover-logo {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 520px;
+    line-height: 400px;
+    color: rgba(239, 239, 239, 1);
+    text-align: center;
+    display: inline-block;
+    transform: scaleX(1.6);
+    letter-spacing: -50px;
+}
+
+
+.story-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.story-caption {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 60px;
+    line-height: 10px;
+    color: rgba(37, 37, 37, 1);
+    text-align: center;
+    display: inline-block;
+    transform: scaleX(1.6);
+    padding-top: 50px;
+    padding-left: 25%;
+    cursor: default;
+    box-sizing: border-box;
+}
+
+.story-text {
+    box-sizing: border-box;
+padding: 5px 353px 100px 308px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.story-bottom {
+    background-color: rgba(247, 144, 228, 1);
+    border-radius: 18px;
+    width: 191px;
+    height: 64px;
+    margin: auto 624px 100px 624px;
+
+}
+
+.bottom-text {
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+    cursor: default;
 }
